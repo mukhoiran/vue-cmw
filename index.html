@@ -8,12 +8,17 @@
     <div id="app">
       <!-- result from {{num1}} + {{num2}} is {{result}}
       <br><button v-on:click='onprocess'>proccess</button> -->
-      <h3>Calculation result between {{a}} and {{b}} :</h3>
+
+      <!-- ======== Exploration computed and methods ======= -->
+      <!-- <h3>Calculation result between {{a}} and {{b}} :</h3>
       <button v-on:click='onprocess'>proccess</button>
       addition : {{addition}} <br>
       reduction : {{reduction}} <br>
       multiplication : {{multiplication}} <br>
-      division : {{division}}
+      division : {{division}} -->
+
+      <!-- ========= Watcher ============ -->
+      <input type="text" v-model="content"> {{information}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>

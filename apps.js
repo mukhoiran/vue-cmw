@@ -39,20 +39,31 @@ var app = new Vue({
   // }
 
   //================= Exploration Methods
+  // data:{
+  //   a:3,
+  //   b:5,
+  //   addition:0,
+  //   reduction:0,
+  //   multiplication:0,
+  //   division:0
+  // },
+  // methods:{
+  //   onprocess(){
+  //     this.addition = this.a + this.b,
+  //     this.reduction = this.a - this.b,
+  //     this.multiplication = this.a * this.b,
+  //     this.division = this.a / this.b
+  //   }
+  // }
+
+  //================= Watcher
   data:{
-    a:3,
-    b:5,
-    addition:0,
-    reduction:0,
-    multiplication:0,
-    division:0
+    content: '',
+    information: ''
   },
-  methods:{
-    onprocess(){
-      this.addition = this.a + this.b,
-      this.reduction = this.a - this.b,
-      this.multiplication = this.a * this.b,
-      this.division = this.a / this.b  
+  watch:{
+    content: function(){
+      this.information = 'typing.......'
     }
   }
 })
