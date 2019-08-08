@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>VueJS Computed, Methods, Watchers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="mx-auto bg-light p-3" style="width: 350px">
       <!-- result from {{num1}} + {{num2}} is {{result}}
       <br><button v-on:click='onprocess'>proccess</button> -->
 
@@ -18,7 +19,14 @@
       division : {{division}} -->
 
       <!-- ========= Watcher ============ -->
-      <input type="text" v-model="content"> {{information}}
+      <!-- <input type="text" v-model="content"> {{information}} -->
+
+      <!-- ========= Watcher with form login =========== -->
+      <h2>Form Login</h2>
+      <input type="password" class="form-control mb-1" v-model="content" placeholder="type password">
+      <input type="password" class="form-control mb-1" v-model="content2" placeholder="re-type password">
+      <p v-html="information"></p>
+      <input type="submit" class="btn btn-primary btn-block" value="SignUp" v-if="show">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>

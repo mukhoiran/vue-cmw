@@ -57,24 +57,46 @@ var app = new Vue({
   // }
 
   //================= Watcher
-  data:{
-    content: '',
-    information: ''
-  },
+  // data:{
+  //   content: '',
+  //   information: ''
+  // },
+  // // watch:{
+  // //   content: function(){
+  // //     this.information = 'typing.......'
+  // //   }
+  // // }
   // watch:{
-  //   content: function(){
-  //     this.information = 'typing.......'
+  //   content: 'type'
+  // },
+  // methods: {
+  //   type: function(){
+  //     if(this.content == 'love'){
+  //       this.information = 'honey'
+  //     }else{
+  //       this.information = 'typing......'
+  //     }
   //   }
   // }
+
+  //================= Watcher with form login
+  data:{
+    content: '',
+    content2: '',
+    information: '',
+    show: false
+  },
   watch:{
-    content: 'type'
+    content2: 'type'
   },
   methods: {
     type: function(){
-      if(this.content == 'love'){
-        this.information = 'honey'
+      if(this.content2 == this.content){
+        this.information = '<i class="text-success">password correct, please continue</i>';
+        this.show = true;
       }else{
-        this.information = 'typing......'
+        this.information = '<i class="text-danger">password incorrect</i>';
+        this.show = false;
       }
     }
   }
