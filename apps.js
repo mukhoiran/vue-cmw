@@ -1,10 +1,10 @@
 var app = new Vue({
   el:'#app',
-  data:{
-    num1: 1,
-    num2: 7,
-    result: null
-  },
+  // data:{
+  //   num1: 1,
+  //   num2: 7,
+  //   result: null
+  // },
   //computed
   // computed:{
     // result: function(){
@@ -12,9 +12,29 @@ var app = new Vue({
     // }
   // }
   //method
-  methods:{
-    onprocess(){
-      return this.result = this.num1 + this.num2
+  // methods:{
+  //   onprocess(){
+  //     return this.result = this.num1 + this.num2
+  //   }
+  // }
+
+  //================= Exploration Computed
+  data:{
+    a:3,
+    b:5,
+  },
+  computed:{
+    addition: function(){
+      return this.a + this.b
+    },
+    reduction: function(){
+      return this.a - this.b
+    },
+    multiplication: function(){
+      return this.a * this.b
+    },
+    division: function(){
+      return this.a / this.b
     }
   }
 })
