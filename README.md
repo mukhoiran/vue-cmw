@@ -1,2 +1,2 @@
 # vuejs-cmw
-Documentation about Computed Methods Watcher
+Documentation about Computed Methods Watcher on VueJS
