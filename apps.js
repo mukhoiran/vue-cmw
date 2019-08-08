@@ -61,9 +61,21 @@ var app = new Vue({
     content: '',
     information: ''
   },
+  // watch:{
+  //   content: function(){
+  //     this.information = 'typing.......'
+  //   }
+  // }
   watch:{
-    content: function(){
-      this.information = 'typing.......'
+    content: 'type'
+  },
+  methods: {
+    type: function(){
+      if(this.content == 'love'){
+        this.information = 'honey'
+      }else{
+        this.information = 'typing......'
+      }
     }
   }
 })
