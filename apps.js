@@ -19,22 +19,40 @@ var app = new Vue({
   // }
 
   //================= Exploration Computed
+  // data:{
+  //   a:3,
+  //   b:5,
+  // },
+  // computed:{
+  //   addition: function(){
+  //     return this.a + this.b
+  //   },
+  //   reduction: function(){
+  //     return this.a - this.b
+  //   },
+  //   multiplication: function(){
+  //     return this.a * this.b
+  //   },
+  //   division: function(){
+  //     return this.a / this.b
+  //   }
+  // }
+
+  //================= Exploration Methods
   data:{
     a:3,
     b:5,
+    addition:0,
+    reduction:0,
+    multiplication:0,
+    division:0
   },
-  computed:{
-    addition: function(){
-      return this.a + this.b
-    },
-    reduction: function(){
-      return this.a - this.b
-    },
-    multiplication: function(){
-      return this.a * this.b
-    },
-    division: function(){
-      return this.a / this.b
+  methods:{
+    onprocess(){
+      this.addition = this.a + this.b,
+      this.reduction = this.a - this.b,
+      this.multiplication = this.a * this.b,
+      this.division = this.a / this.b  
     }
   }
 })
